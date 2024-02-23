@@ -41,11 +41,15 @@ docker-compose --version
 nano Dockerfile
 ```
 
-![image-20240223101108247](./assets/image-20240223101108247.png)
+
+
+![Captura desde 2024-02-23 10-11-03](./assets/Captura%20desde%202024-02-23%2010-11-03.png)
 
 - **Captura de pantalla y documento donde se vea el fichero docker-compose.yaml .**
 
-![image-20240223100924375](./assets/image-20240223100924375.png)
+
+
+![Captura desde 2024-02-23 10-08-59](./assets/Captura%20desde%202024-02-23%2010-08-59.png)
 
 ```bash
 docker build -t cmatrix-app .
@@ -68,7 +72,7 @@ docker run --rm -it cmatrix-app -C green
   
   ```
 
-  ![image-20240223100739596](./assets/image-20240223100739596.png)
+  ![Captura desde 2024-02-23 10-17-24](./assets/Captura%20desde%202024-02-23%2010-17-24.png)
 
   
 
