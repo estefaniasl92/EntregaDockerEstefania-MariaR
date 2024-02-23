@@ -1,3 +1,80 @@
-# Ejercicio 4
+# Tarea Entregable - Docker
 
-![Captura desde 2024-02-21 11-01-02](./Ejercicio%204.assets/Captura%20desde%202024-02-21%2011-01-02.png)
+
+
+> Módulo Despliegue de Aplicaciones Web , tarea realizada por Estefanía Sastre y María Rosete
+
+
+
+[TOC]
+
+
+
+# Ejercicio 4 - Docker Compose
+
+**Desplegar la aplicación cmatrix utilizando docker-compose.**
+
+
+
+**Entregar las siguientes capturas de pantalla y los comandos empleados para resolver el ejercicio:**
+
+Descargar Docker Compose: 
+
+```bash
+sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+
+```
+
+Dando permisos de ejecución al binario de Docker Compose:
+
+```bash
+sudo chmod +x /usr/local/bin/docker-compose
+
+```
+
+```bash
+docker-compose --version
+
+```
+
+```bash
+nano Dockerfile
+```
+
+![image-20240223101108247](./assets/image-20240223101108247.png)
+
+- **Captura de pantalla y documento donde se vea el fichero docker-compose.yaml .**
+
+![image-20240223100924375](./assets/image-20240223100924375.png)
+
+```bash
+docker build -t cmatrix-app .
+
+```
+
+Efecto Greenrain:
+
+```bash
+docker run --rm -it cmatrix-app -C green
+
+```
+
+
+
+- **Captura de pantalla y documento donde se vea la aplicación funcionando. Se valorará conseguir el efecto Greenrain .**
+
+  ```bash
+  docker-compose up
+  
+  ```
+
+  ![image-20240223100739596](./assets/image-20240223100739596.png)
+
+  
+
+- **Explicar brevemente cómo funciona esta aplicación.**
+
+  La aplicación **cmatrix** es un programa que simula el famoso efecto  "Matrix" que se ve en la película del mismo nombre. Funciona generando  una animación de caracteres que caen de arriba hacia abajo en la  pantalla de la terminal, creando la ilusión de un flujo de datos similar al que se ve en la película.
+
+  Crea una cuadrícula de caracteres que representan los caracteres que  caen y los actualiza en la pantalla en cada fotograma. Puedes  personalizar varios aspectos de la animación, como el color de los  caracteres, la velocidad de caída y el tipo de fuente utilizada.
+
