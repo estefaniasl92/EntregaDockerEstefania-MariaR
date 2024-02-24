@@ -17,11 +17,11 @@
 Descargar imagen:
 
 ```bash
-docker pull php:7.4-apache
+$ docker pull php:7.4-apache
 ```
 
 ```bash
-docker run -d --name web -p 8080:80 php:7.4-apache
+$ docker run -d --name web -p 8080:80 php:7.4-apache
 
 ```
 
@@ -40,11 +40,11 @@ Antes de arrancarlo visitar la página del contenedor en Docker Hub y establecer
 Descargar imagen:
 
 ```bash
-docker pullmariadb
+$ docker pullmariadb
 ```
 
 ```bash
-docker run -d --name bbdd -p 3306:3306 \
+$ docker run -d --name bbdd -p 3306:3306 \
 -e MYSQL_ROOT_PASSWORD=root \
 -e MYSQL_DATABASE=prueba \
 -e MYSQL_USER=invitado \
@@ -68,7 +68,7 @@ Entregar un documento con las siguientes capturas de pantalla y los comandos emp
 - **Captura de pantalla y documento que desde el navegador muestre el fichero index.html .**
 
 ```bash
-echo '<!DOCTYPE html>
+$ echo '<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -86,7 +86,7 @@ echo '<!DOCTYPE html>
 
 
 ```bash
-docker cp index.html 0ac9582d4557:/var/www/html
+$ docker cp index.html 0ac9582d4557:/var/www/html
 ```
 
 ![image-20240224022408412](Ejercicio1.assets/image-20240224022408412.png)
@@ -100,14 +100,14 @@ docker cp index.html 0ac9582d4557:/var/www/html
 - **Captura de pantalla y documento que desde un navegador muestre la salida del script mes.php .**
 
 ```bash
-echo '<?php' > mes.php
+$ echo '<?php' > mes.php
 echo 'echo "Este es el mes actual: " . date("F");' >> mes.php
 echo '?>' >> mes.php
 
 ```
 
 ```bash
-docker cp mes.php 0ac9582d4557:/var/www/html
+$ docker cp mes.php 0ac9582d4557:/var/www/html
 
 ```
 
@@ -122,7 +122,7 @@ docker cp mes.php 0ac9582d4557:/var/www/html
 **Captura de pantalla y documento donde se vea el tamaño del contenedor web después de crear los dos ficheros.**
 
 ```bash
-docker ps --size
+$ docker ps --size
 
 ```
 
@@ -153,13 +153,13 @@ Base de datos **dbeaver**:
 
 
 ```bash
-docker ps -a
+$ docker ps -a
 ```
 
 ![image-20240224023846694](Ejercicio1.assets/image-20240224023846694.png)
 
 ```bash
-docker rmi mariadb
+$ docker rmi mariadb
 ```
 
 ![image-20240224023953080](Ejercicio1.assets/image-20240224023953080.png)
