@@ -2,13 +2,11 @@
 
 
 
-> Módulo Despliegue de Aplicaciones Web , tarea realizada por Estefanía Sastre y María Rosete
+> Módulo Despliegue de Aplicaciones Web , tarea realizada por María Rosete
 
 
 
 [TOC]
-
-
 
 # Ejercicio 4 - Docker Compose
 
@@ -18,63 +16,71 @@
 
 **Entregar las siguientes capturas de pantalla y los comandos empleados para resolver el ejercicio:**
 
-Descargar Docker Compose: 
+Crear archivo **docker-compose.yaml:** 
 
 ```bash
-sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-
-```
-
-Dando permisos de ejecución al binario de Docker Compose:
-
-```bash
-sudo chmod +x /usr/local/bin/docker-compose
-
+$ nano docker-compose.yaml
 ```
 
 ```bash
-docker-compose --version
+version: '3'
+services:
+  cmatrix:
+    image: ubuntu:latest
+    container_name: cmatrix_container
+    tty: true
+    command: /bin/bash -c "apt-get update && apt-get install -y cmatrix && cmatrix"
 
 ```
 
-```bash
-nano Dockerfile
-```
 
-
-
-![Captura desde 2024-02-23 10-11-03](./assets/Captura%20desde%202024-02-23%2010-11-03.png)
 
 - **Captura de pantalla y documento donde se vea el fichero docker-compose.yaml .**
 
+![image-20240224102818754](Ejercicio%204.assets/image-20240224102818754.png)
 
-
-![Captura desde 2024-02-23 10-08-59](./assets/Captura%20desde%202024-02-23%2010-08-59.png)
+Crear contenedor:
 
 ```bash
-docker build -t cmatrix-app .
+$ docker-compose up -d
 
 ```
 
-Efecto Greenrain:
-
-```bash
-docker run --rm -it cmatrix-app -C green
-
-```
+![image-20240224102930058](Ejercicio%204.assets/image-20240224102930058.png)
 
 
 
 - **Captura de pantalla y documento donde se vea la aplicación funcionando. Se valorará conseguir el efecto Greenrain .**
 
   ```bash
-  docker-compose up
+  $ docker ps 
+  $ docker exec -it cmatrix_container /bin/bash
+  $ cmatrix
   
   ```
 
+  ![image-20240224103502962](Ejercicio%204.assets/image-20240224103502962.png)
+
   ![Captura desde 2024-02-23 10-17-24](./assets/Captura%20desde%202024-02-23%2010-17-24.png)
 
-  
+  Puedes cambiar el color:
+
+  green, red, blue, white, yellow, cyan, magenta and black
+
+```bash
+$ cmatrix -C magenta -f
+
+```
+
+![image-20240224104249710](Ejercicio%204.assets/image-20240224104249710.png)
+
+Cambiar la velocidad:
+
+```bash
+$ cmatrix -u 2
+```
+
+
 
 - **Explicar brevemente cómo funciona esta aplicación.**
 
