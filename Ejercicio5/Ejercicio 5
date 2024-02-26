@@ -128,9 +128,20 @@ $ docker push marla960/dockerestefaniamariarosete:web
 
 
 
+```bash
+$ docker pull marla960/dockerestefaniamariarosete:web
 
+```
 
+![image-20240226101919064](Ejercicio%205.assets/image-20240226101919064.png)
 
+```bash
+$ docker run -d --name webestefania -p 8000:80 marla960/dockerestefaniamariarosete:web
+```
+
+![image-20240226102340058](Ejercicio%205.assets/image-20240226102340058.png)
+
+![image-20240226102519420](Ejercicio%205.assets/image-20240226102519420.png)
 
 
 
