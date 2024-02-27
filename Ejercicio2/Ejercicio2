@@ -1,10 +1,10 @@
-# Ejercicio 2
+# Ejercicio 2 - Portainer
 
 > Realizado por María Rosete y Estefanía Sastre
 
 [TOC]
 
-# Ejercicio 2 - Portainer
+### Instalación de Portainer
 
 ```bash
 $docker volume create portainer_data
@@ -13,38 +13,38 @@ $docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /v
 
 ![image-20240219093813026](./Ejercicio2.assets/image-20240219093813026.png)
 
-Acceso a Portainer desde el navegador:
+### Acceso a Portainer desde el navegador.
 
 ![image-20240219094108960](./Ejercicio2.assets/image-20240219094108960.png)
 
-Contenedores activos:
+### Contenedores activos.
 
 ![image-20240219094529244](./Ejercicio2.assets/image-20240219094529244.png)
 
-Creación de un contenedor:
+### Creación de un contenedor.
 
 ![image-20240219094723708](./Ejercicio2.assets/image-20240219094723708.png)
 
-Pausa del contenedor:
+### Pausa del contenedor.
 
 ![image-20240219094827835](./Ejercicio2.assets/image-20240219094827835.png)
 
-Eliminación del contenedor:
+### Eliminación del contenedor.
 
 ![image-20240219095015622](./Ejercicio2.assets/image-20240219095015622.png)
 
-Creación de una nueva red:
+### Creación de una nueva red.
 
 ![image-20240219095255372](./Ejercicio2.assets/image-20240219095255372.png)
 
-Eliminación de una red:
+### Eliminación de una red.
 
 ![image-20240219095415211](./Ejercicio2.assets/image-20240219095415211.png)
 
-Creación de un nuevo volumen:
+### Creación de un nuevo volumen.
 
 ![image-20240219095540088](./Ejercicio2.assets/image-20240219095540088.png)
 
-Eliminación de un volumen:
+### Eliminación de un volumen.
 
 ![image-20240219095633749](./Ejercicio2.assets/image-20240219095633749.png)
