@@ -1,12 +1,10 @@
-# Ejercicio 3
-
-## Contenedores en red: Adminer y MariaDB
+# Ejercicio 3 - Contenedores en red: Adminer y MariaDB
 
 > Realizado por Estefanía Sastre Lois
 
 [TOC]
 
-### Creación de una red bridge "redbd".
+## Creación de una red bridge "redbd".
 
 ```bash
 $docker network create redbd
@@ -15,7 +13,7 @@ $docker network ls
 
 ![image-20240223092028772](./Ejercicio%203.assets/image-20240223092028772.png)
 
-### Creación de un contenedor con una imagen de mariaDB.
+## Creación de un contenedor con una imagen de mariaDB.
 
 La asociamos a la red "redbd" y al puerto 3306:
 
@@ -31,7 +29,7 @@ $docker run -d \
 
 ![image-20240223092256145](./Ejercicio%203.assets/image-20240223092256145.png)
 
-### Creación de un contenedor Adminer.
+## Creación de un contenedor Adminer.
 
 Para conectarlo al contenedor de la BD:
 
@@ -45,7 +43,7 @@ $docker run -d \
 
 ![image-20240223092446576](./Ejercicio%203.assets/image-20240223092446576.png)
 
-### Comprobación de que el contenedor Adminer puede conectar con mysql.
+## Comprobación de que el contenedor Adminer puede conectar con mysql.
 
 Para obtener la ip del contenedor:
 
@@ -57,7 +55,7 @@ $docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' mi
 
 ![image-20240223101136774](./Ejercicio%203.assets/image-20240223101136774.png)
 
-### Otras capturas
+## Otras capturas
 
 Lista de contenedores:
 
